@@ -1,0 +1,59 @@
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: "Jaini Purva", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+button {
+    font-size: 1em !important;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.contact-form {
+    background-color: #767676;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    background-color: #767676;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+    margin: 0;
+}
+
+#qrcode {
+    margin-top: 40px;
+    text-align: center;
+}
