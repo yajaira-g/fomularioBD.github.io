@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar la Cédula</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 60px;
+        }
+        input {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Validar Cedula Dominicana</h1>
+    <label for="">Ingrese la cédula: </label>
+    <input type="text" id="cedula" maxlength="11" placeholder="Ej: 12345678901">
+    <br>
+    <button onclick="validarCedula()">Validar Cédula</button>
+    <p id="resultado"></p>
+
+    <script>
+        function validarCedula() {
+            var cedula = document.getElementById("cedula").value.trim();
+            var resultado = document.getElementById("resultado");
+            
+            // Validar si la cédula tiene la longitud correcta y es numérica
+            if (cedula.length !== 11 || isNaN(cedula)) {
+                resultado.textContent = "La cédula debe ser un número de 11 dígitos.";
+                resultado.style.color = "red";
+                return;
+            }
+
+            var suma = 0;
+
+            // Recorremos la cédula de izquierda a derecha, excepto el último dígito
+            for (let i = 0; i < 10; i++) {
+                var digito = parseInt(cedula[i]);
+                var multiplicador = (i % 2 === 0) ? 1 : 2;
+                let valor = digito * multiplicador;
+
+                // Si la multiplicación es mayor o igual a 10, se le resta 9
+                if (valor >= 10) {
+                    valor -= 9; 
+                }
+
+                suma += valor;
+            }
+
+            var residuo = suma % 10;
+            var digitoVerificadorCalculado = (residuo === 0) ? 0 : 10 - residuo;
+            var digitoVerificador = parseInt(cedula[10]);
+            
+            if (digitoVerificadorCalculado === digitoVerificador) {
+               resultado.textContent = "CÉDULA ES CORRECTA";
+               resultado.style.color = "green";
+            } else {
+                resultado.textContent = "CÉDULA ES INCORRECTA";
+                resultado.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
