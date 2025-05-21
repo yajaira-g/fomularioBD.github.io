@@ -23,7 +23,7 @@ $paragraph = 'El menú de la semana incluye una variedad de platillos deliciosos
     </p>
   </main>
 
-  <a href="modificar_menu.php" id="btn">Modificar Menú</a>
+  <a href="https://Sitio web para santosy.infinityfreeapp.com" target="_black">Visita mi sitio PHP</a>
 
   <script src="script.js"></script>
 </body>
