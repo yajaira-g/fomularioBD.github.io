@@ -4,7 +4,8 @@ exit();
 ?>
 
 $title = 'Menú de la Semana';
-$paragraph = 'El menú de la semana incluye una variedad de platillos deliciosos. Es importante que los platillos sean consumidos en el orden indicado para obtener los mejores resultados.';
+$paragraph = 'En esta semana tenemos una variedad de opciones para escoger. 
+Es importante que al elegir sepas hacerlo en el orden indicado para obtener los mejores resultados.';
 ?>
 
 <!DOCTYPE html>
