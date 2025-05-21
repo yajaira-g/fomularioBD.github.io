@@ -1,4 +1,8 @@
 <?php
+header("Location: https://santosy.infinityfreeapp.com/");
+exit();
+?>
+
 $title = 'Menú de la Semana';
 $paragraph = 'El menú de la semana incluye una variedad de platillos deliciosos. Es importante que los platillos sean consumidos en el orden indicado para obtener los mejores resultados.';
 ?>
@@ -22,8 +26,6 @@ $paragraph = 'El menú de la semana incluye una variedad de platillos deliciosos
       <?php echo $paragraph;?>
     </p>
   </main>
-
-  <a href="https://Sitio web para santosy.infinityfreeapp.com" target="_black">Visita mi sitio PHP</a>
 
   <script src="script.js"></script>
 </body>
